@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HumbleBrag</string>
+    <string name="menu_label_log_out">Log out</string>
 </resources>

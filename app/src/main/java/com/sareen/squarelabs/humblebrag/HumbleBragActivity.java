@@ -3,6 +3,9 @@ package com.sareen.squarelabs.humblebrag;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.twitter.sdk.android.Twitter;
@@ -69,4 +72,32 @@ public class HumbleBragActivity extends AppCompatActivity {
     }
 
 
+    // Handle when a menu option is selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int itemId = item.getItemId();
+        if(itemId == R.id.action_logout)
+        {
+            // logout from twitter
+            Twitter.getSessionManager()
+                    .clearActiveSession();
+
+            //restart activity to show login button again
+            this.recreate();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    // To inflate activity menu options
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_humble_brag, menu);
+        return true;
+    }
 }
