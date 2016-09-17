@@ -22,7 +22,10 @@
             android:name="io.fabric.ApiKey"
             android:value="7cc34cb64473c1c314d8fb0608462dc72d244c60" />
 
-        <activity android:name=".TwitterLoginActivity"></activity>
+        <activity android:name=".TwitterLoginActivity" />
+        <activity android:name=".PostTweetActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

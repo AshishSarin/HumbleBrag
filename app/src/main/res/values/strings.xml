@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">HumbleBrag</string>
     <string name="menu_label_log_out">Log out</string>
+    <string name="edit_tweet_hint">Write your tweet here...</string>
+    <string name="progress_dialog_post_tweet_title">Posting your tweet...</string>
+    <string name="progress_dialog_post_tweet_message">Please wait...</string>
+    <string name="error_msg_post_tweet">Error! Unable to post tweet</string>
 </resources>

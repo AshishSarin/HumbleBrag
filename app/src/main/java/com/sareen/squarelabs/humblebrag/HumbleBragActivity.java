@@ -2,10 +2,12 @@ package com.sareen.squarelabs.humblebrag;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.twitter.sdk.android.Twitter;
@@ -14,7 +16,8 @@ import com.twitter.sdk.android.core.TwitterSession;
 
 import io.fabric.sdk.android.Fabric;
 
-public class HumbleBragActivity extends AppCompatActivity {
+public class HumbleBragActivity extends AppCompatActivity
+{
 
     private static final String LOG_TAG = HumbleBragActivity.class.getSimpleName();
 
@@ -33,11 +36,33 @@ public class HumbleBragActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_humble_brag);
 
+        // setting up the twitter kit
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new Twitter(authConfig));
 
+        setupViews();
+
+        getSupportActionBar()
+                .setElevation(0f);
+
+    }
+
+    private void setupViews()
+    {
         userNameView = (TextView)findViewById(R.id.user_name_textview);
 
+        // setting listener for tweet floating action button
+        FloatingActionButton fab =
+                (FloatingActionButton)findViewById(R.id.fab_tweet);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HumbleBragActivity.this,
+                        PostTweetActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
