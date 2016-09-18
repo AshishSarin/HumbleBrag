@@ -161,12 +161,15 @@ public class PostTweetActivity extends AppCompatActivity {
 
 
 
+    //TODO: Allow user to post tweet with image
 
     /*Below code is when I tried adding image upload with tweet
     * but it didn't work*/
     /*
     private static final int PICK_MEDIA_CODE = 111;
     private String filePath;
+
+    // OnClick Listener of image button for selecting image
     public void onPickMedia(View view)
     {
         Intent intent = new Intent(Intent.ACTION_PICK);
