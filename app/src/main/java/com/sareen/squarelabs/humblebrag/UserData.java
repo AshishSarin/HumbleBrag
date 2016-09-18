@@ -9,11 +9,15 @@ package com.sareen.squarelabs.humblebrag;
 public class UserData
 {
     public String userName;
+    public String userScreenName;
     public String userProfileImageUrl;
+    public String userTweet;
 
-    public UserData(String name, String url)
+    public UserData(String name, String screenName, String url, String tweet)
     {
         userName = name;
+        userScreenName = screenName;
         userProfileImageUrl = url;
+        userTweet = tweet;
     }
 }
