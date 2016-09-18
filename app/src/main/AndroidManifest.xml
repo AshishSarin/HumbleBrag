@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HumbleBragActivity">
+        <activity android:name=".activities.HumbleBragActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,10 +22,13 @@
             android:name="io.fabric.ApiKey"
             android:value="7cc34cb64473c1c314d8fb0608462dc72d244c60" />
 
-        <activity android:name=".TwitterLoginActivity" />
-        <activity android:name=".PostTweetActivity"
+        <activity android:name=".activities.TwitterLoginActivity" />
+        <activity android:name=".activities.PostTweetActivity"
             android:windowSoftInputMode="stateVisible|adjustResize"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".activities.FullScreenImageActivity"/>
     </application>
 
 </manifest>

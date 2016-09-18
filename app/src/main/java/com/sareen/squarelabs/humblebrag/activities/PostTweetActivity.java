@@ -1,4 +1,4 @@
-package com.sareen.squarelabs.humblebrag;
+package com.sareen.squarelabs.humblebrag.activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sareen.squarelabs.humblebrag.R;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterCore;
@@ -23,8 +24,6 @@ import retrofit2.Call;
 
 public class PostTweetActivity extends AppCompatActivity
 {
-
-
 
     private EditText edit_tweet;        // EditText with tweet to post
     private ProgressDialog dialog;      // ProgressDialog to show while posting tweet
@@ -68,7 +67,7 @@ public class PostTweetActivity extends AppCompatActivity
                 else
                 {
                     text_char_count.setTextColor
-                            (ContextCompat.getColor(PostTweetActivity.this, R.color.colorAccent));
+                            (ContextCompat.getColor(PostTweetActivity.this, R.color.colorPrimary));
                 }
             }
 

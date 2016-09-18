@@ -1,12 +1,13 @@
 /*This activity is used for login the user*/
 
 
-package com.sareen.squarelabs.humblebrag;
+package com.sareen.squarelabs.humblebrag.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.sareen.squarelabs.humblebrag.R;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterException;
@@ -39,6 +40,8 @@ public class TwitterLoginActivity extends AppCompatActivity
             {
                 // Login is successful
                 // Close this activity
+                Intent data = new Intent();
+                setResult(RESULT_OK, data);
                 finish();
             }
 
