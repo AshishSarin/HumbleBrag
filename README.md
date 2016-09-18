@@ -2,8 +2,7 @@
 
 # HumbleBrag : Wall of Shame. This is created for an assignment
 
-# 1) Using this application, a user can log in to twitter, compose a tweet (text only) and
-#    post it on their behalf. Logout option is also provided in menu options.
+# 1) Using this application, a user can log in to twitter, compose a tweet (text only) and post it on their behalf. Logout option is also provided in menu options.
 
 
 # 2) On user's timeline, it fetches 100 most recent users who have been singled out on twitter handle "@HumbleBrag" and shows their profile image, username, screen name, and their tweet. 
