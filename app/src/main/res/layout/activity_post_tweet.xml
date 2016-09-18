@@ -39,7 +39,7 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:gravity="right"
+        android:gravity="center_vertical"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
@@ -52,9 +52,10 @@
             android:text="140"
             android:textColor="@color/colorAccent"
             android:textSize="22sp"
-            android:gravity="center"
+            android:gravity="center_vertical|right"
             android:layout_marginRight="16dp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
             android:layout_height="match_parent" />
 
         <Button
@@ -64,6 +65,8 @@
             android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+
 
     </LinearLayout>
 
