@@ -10,3 +10,5 @@
 #				profile image and screen names. When clicked on profile image, it is shown in full screen with options 
 #				of zoom in and zoom out. Images can be swiped left or right to see next user on the list.
 
+# Version 1.2.1 : Animation added for transition between HumbleBragActivity and PostTweetActivity
+
