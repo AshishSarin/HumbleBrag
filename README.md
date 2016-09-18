@@ -6,3 +6,7 @@
 #               text count is shown which changes color to red when exeecing limit of 140. 
 #               Currently only text can be posted from PostTweetActivity
 
+# Version 1.2 : 100 recent users who are singled out on "@HumbleBrag" timline are listed inside HumbleBrag activity with 
+#				profile image and screen names. When clicked on profile image, it is shown in full screen with options 
+#				of zoom in and zoom out. Images can be swiped left or right to see next user on the list.
+
