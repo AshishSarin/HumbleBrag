@@ -109,6 +109,10 @@ public class HumbleBragActivity extends AppCompatActivity
                 Intent intent = new Intent(HumbleBragActivity.this,
                         PostTweetActivity.class);
                 startActivity(intent);
+
+                // adding animation
+                // PostTweetActivity will slide up and HumbleBragActivity will zoom out
+                overridePendingTransition(R.anim.slide_up, R.anim.zoom_out);
             }
         });
     }
