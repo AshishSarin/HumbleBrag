@@ -5,6 +5,7 @@ package com.sareen.squarelabs.humblebrag.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.sareen.squarelabs.humblebrag.R;
@@ -66,6 +67,7 @@ public class TwitterLoginActivity extends AppCompatActivity
         // This is done so that user can exit app
         // by pressing back button from login activity
         moveTaskToBack(true);
+        ActivityCompat.finishAffinity(this);
         super.onBackPressed();
     }
 }
