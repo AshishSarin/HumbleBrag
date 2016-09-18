@@ -1,22 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="20dp">
+    android:paddingTop="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="20dp">
 
-    <TextView
-        android:id="@+id/list_item_user_name"
-        android:paddingLeft="20dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:gravity="center_vertical"
-        android:textColor="@color/colorPrimaryText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"/>
 
     <ImageView
         android:id="@+id/list_item_user_image"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"/>
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="top"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
 
+    <LinearLayout
+        android:paddingLeft="20dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/list_item_user_name"
+                android:text="Ashish Sarin"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorPrimaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/list_item_user_screen_name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="\@ashish_sarin"
+                android:textSize="14sp"
+                android:paddingLeft="3dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorPrimaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+         </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_item_user_tweet"
+            android:text="adkandadasdasdamdladlsdsfasdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddadasdmaskdmasdkasmdasmdkasmd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </LinearLayout>
