@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -195,9 +196,13 @@ public class TimeLineFragment extends Fragment
                         // adding original author of tweet to userList
 
                         Tweet orgTweet = tweetList.get(i).retweetedStatus;  // getting original tweet
-                        String userName = "@" + orgTweet.user.screenName;   // getting original tweet author
+                        String userName = orgTweet.user.name;               // getting userName
+                        String userScreenName = "@" + orgTweet.user.screenName;   // getting original tweet author
                         String userImageUrl = orgTweet.user.profileImageUrl;    // getting profile image url of author
-                        userList.add(new UserData(userName, userImageUrl));     // creating a new user data and adding it to list
+                        String userTweet = orgTweet.text;                       // getting the tweet
+                        String time = tweetList.get(i).createdAt;
+                        Log.e("Tweeted at: ", time);
+                        userList.add(new UserData(userName,userScreenName, userImageUrl, userTweet));     // creating a new user data and adding it to list
 
                     }
 

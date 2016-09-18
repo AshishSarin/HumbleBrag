@@ -58,6 +58,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     public void onBindViewHolder(UserViewHolder holder, int position) {
         UserData user = userList.get(position);
 
+        holder.userScreenNameView.setText(user.userScreenName);
+
+        holder.usertTweetView.setText(user.userTweet);
+
         holder.userNameView.setText(user.userName);
 
         String imageUrl = Utilities.removeNormal(user.userProfileImageUrl);
@@ -86,14 +90,19 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         implements View.OnClickListener
     {
         protected TextView userNameView;
+        protected TextView userScreenNameView;
         protected ImageView userImageView;
+        protected TextView usertTweetView;
+
 
 
         public UserViewHolder(View v)
         {
             super(v);
             userNameView = (TextView)v.findViewById(R.id.list_item_user_name);
+            userScreenNameView = (TextView)v.findViewById(R.id.list_item_user_screen_name);
             userImageView = (ImageView) v.findViewById(R.id.list_item_user_image);
+            usertTweetView = (TextView)v.findViewById(R.id.list_item_user_tweet);
             // setting the click listener for the items
             v.setOnClickListener(this);
         }
